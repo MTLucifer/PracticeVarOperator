@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 4</title>
+</head>
+<body>
+<p>Nhập bán kính</p><input type="number" id="radius">
+<p>Nhập diện tích</p><input type="number" id="area">
+<br>
+<input onclick="sum()" type="button" value="Tính">
+<p><Span id="result1"> </Span></p>
+<p><Span id="result2"> </Span></p>
+<script>
+    function sum() {
+        if (document.getElementById("radius").value !== "") {
+            let radius = parseInt(document.getElementById("radius").value);
+            let result1 = radius * 2 * 3.141592;
+            document.getElementById("result1").innerHTML = "Chu vi theo bán kính là: " + result1.toFixed(3);
+        }
+        else {
+            let area = parseInt(document.getElementById("area").value);
+            let result2 = Math.sqrt(area/3.141592) * 2 * 3.141592;
+            document.getElementById("result2").innerHTML = "Chu vi theo diện tích là: " + result2.toFixed(3);
+        }
+    }
+</script>
+</body>
+</html>

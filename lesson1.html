@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+<p>Nhập điểm vật lý</p><input type="number" id="Physic">
+<p>Nhập điểm hoá học</p><input type="number" id="Chemistry">
+<p>Nhập điểm sinh học</p><input type="number" id="Biology">
+<br>
+<input onclick="sum()" type="button" value="Tính">
+<p><Span id="result"> </Span></p>
+<script>
+    function sum() {
+        let Physic =parseInt(document.getElementById("Physic").value);
+        let Chemistry = parseInt(document.getElementById("Chemistry").value);
+        let Biology = parseInt(document.getElementById("Biology").value);
+        let result = (Physic + Chemistry +Biology)/3;
+        document.getElementById("result").innerHTML = "Điểm trung bình: " + result.toFixed(3);
+    }
+</script>
+</body>
+</html>

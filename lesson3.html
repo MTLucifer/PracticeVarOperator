@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 3</title>
+</head>
+<body>
+    <p>Nhập bán kính</p><input type="number" id="radius">
+    <p>Nhập chu vi</p><input type="number" id="perimeter">
+    <br>
+    <input onclick="sum()" type="button" value="Tính">
+        <p><Span id="result1"> </Span></p>
+        <p><Span id="result2"> </Span></p>
+    <script>
+    function sum() {
+        if (document.getElementById("radius").value !== "") {
+            let radius = parseInt(document.getElementById("radius").value);
+            let result1 = radius * radius * 3.141592;
+            document.getElementById("result1").innerHTML = "Diện tích theo bán kính là: " + result1.toFixed(3);
+        }
+        else {
+            let perimeter = parseInt(document.getElementById("perimeter").value);
+            let result2 = (perimeter / (3.141592 * 2)) * (perimeter / (3.141592 * 2)) * 3.141592;
+            document.getElementById("result2").innerHTML = "Diện tích theo chu vi là: " + result2.toFixed(3);
+        }
+    }
+</script>
+</body>
+</html>
